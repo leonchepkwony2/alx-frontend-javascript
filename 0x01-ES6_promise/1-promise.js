@@ -1,8 +1,6 @@
-function getFullResponseFromAPI(apiEndpoint) {
+export default function getFullResponseFromAPI(success) {
   return new Promise((resolve, reject) => {
-    if (apiEndpoint) resolve({ status: 200, body: 'Success' });
-    reject(Error('The fake API is not working currently'));
+    if (success) resolve({ status: 200, body: 'Success' });
+    else reject(Error('The fake API is not working currently'));
   });
 }
-// Export the function for external use
-export default getFullResponseFromAPI;
